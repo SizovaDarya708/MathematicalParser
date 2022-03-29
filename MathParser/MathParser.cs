@@ -135,7 +135,6 @@ namespace ScienceLibrary.MathParser
         {
             foreach(var expressionParser in _expressionParsers
                                         .OrderByDescending(f => f is SumParser)
-                                        .ThenByDescending(f => f is ProductParser)
                                         .ThenByDescending(f => f.Name.Length)
                                         .ToList())
             {
