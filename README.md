@@ -3,8 +3,8 @@
 
 Пример использования:
 
+```cs
 var parser = new MathParser();
-
 var expression = "x+y+2*z";
 var parseResult = parser.TryParse(expression, "x", "y", "z");
 
@@ -22,3 +22,4 @@ else
 {
     Console.WriteLine(parseResult.ErrorMessage);
 }
+```
