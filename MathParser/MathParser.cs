@@ -23,11 +23,15 @@ namespace ScienceLibrary.MathParser
             _numberFactory = new NumberParser();
             _expressionParsers = new List<IExpressionParser>()
             {
+                new PowParser(this),
+                new FractionParser(this),
+                new SinParser(this),
                 new CosParser(this),
                 new TgParser(this),
                 new CtgParser(this),
                 new ExpParser(this),
                 new SumParser(this),
+                new ProductParser(this),
                 new LogParser(this),
                 _numberFactory 
             };
@@ -135,6 +139,7 @@ namespace ScienceLibrary.MathParser
         {
             foreach(var expressionParser in _expressionParsers
                                         .OrderByDescending(f => f is SumParser)
+                                        .ThenByDescending(f => f is ProductParser)
                                         .ThenByDescending(f => f.Name.Length)
                                         .ToList())
             {
