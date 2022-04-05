@@ -2,8 +2,16 @@
 
 namespace ScienceLibrary.MathParser
 {
+    /// <summary>
+    /// Класс, содержащий в себе методы валидации для входной строки
+    /// </summary>
     public static class Validate
     {
+        /// <summary>
+        /// Валидация полученной строки - проверка вложенности выражения
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
         public static bool IsExpressionInBrackets(string expression)
         {
             if (string.IsNullOrEmpty(expression))
@@ -28,6 +36,11 @@ namespace ScienceLibrary.MathParser
 
             return balance == 0;
         }
+        /// <summary>
+        /// Валидация полученной строки - проверка балансировки скобок
+        /// </summary>
+        /// <param name="expression"></param>
+        /// <returns></returns>
         public static bool IsBracketsAreBalanced(string expression)
         {
             int balance = 0;
