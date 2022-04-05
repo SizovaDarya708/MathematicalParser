@@ -23,3 +23,7 @@ else
     Console.WriteLine(parseResult.ErrorMessage);
 }
 ```
+
+Подробная документация библиотеки:
+
+https://docs.google.com/document/d/1TFiDlCP5zGI0uFyq_etCWrmAOlhUKp-hh_oB5cQFZH0/edit?usp=sharing
